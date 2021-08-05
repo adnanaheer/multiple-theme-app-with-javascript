@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
+    <title>Multiples Themes</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
@@ -15,19 +15,28 @@
     <div class="theme-switch-wrapper">
         <span id="toggle-icon">
             <span class="toggle-text">Light Mode</span>
-                <i class="fas fa-sun"></i>
+            <i class="fas fa-sun"></i>
         </span>
         <label class="theme-switch">
             <input type="checkbox">
             <div class="slider round"></div>
         </label>
+        <form>
+            <select id="dropdown">
+              <option>Theme Change</option>
+              <option value="yellow">Yellow</option>
+              <option value="pink">Pink</option>
+              <option value="green">Green</option>
+              <option value="blue">Blue</option>
+            </select>
+          </form>
     </div>
 
     <nav id="nav">
         <a href="#home">HOME</a>
         <a href="#about">ABOUT US</a>
         <a href="#projects">PROJECTS</a>
-        <a href="#contact">CONTACT US</a>
+        <a href="#contact">CONTACT US</a>        
     </nav>
 
     <section id="home">

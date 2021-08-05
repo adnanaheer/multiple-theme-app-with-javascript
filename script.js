@@ -10,6 +10,7 @@ const image6 = document.getElementById('image6')
 const image7 = document.getElementById('image7')
 const image8 = document.getElementById('image8')
 const textBox = document.getElementById('text-box')
+const dropDown = document.getElementById("dropdown");
 
 function imageMode(color) {
     image1.src = `img/html_${color}.svg`
@@ -37,6 +38,53 @@ function lightMode() {
     toggleIcon.children[1].classList.replace('fa-moon', 'fa-sun')
     imageMode('light_blue')
 }
+
+function yellowMode() {
+    document.documentElement.setAttribute('data-theme', 'yellow')
+    nav.style.backgroundColor = 'rgba(0, 0, 0, 0.1)'
+    textBox.style.backgroundColor = 'rgba(255, 255, 255, 0.5)'
+    imageMode('yellow')
+}
+
+function pinkMode() {
+    document.documentElement.setAttribute('data-theme', 'pink')
+    nav.style.backgroundColor = 'rgba(0, 0, 0, 0.1)'
+    textBox.style.backgroundColor = 'rgb(0, 0, 0, 0.5)'
+    imageMode('pink')
+}
+
+function greenMode() {
+    document.documentElement.setAttribute('data-theme', 'green')
+    nav.style.backgroundColor = 'rgba(0, 0, 0, 0.1)'
+    textBox.style.backgroundColor = 'rgb(0, 0, 0, 0.5)'
+    imageMode('green')
+}
+
+function blueMode() {
+    document.documentElement.setAttribute('data-theme', 'blue')
+    nav.style.backgroundColor = 'rgba(0, 0, 0, 0.1)'
+    textBox.style.backgroundColor = 'rgb(0, 0, 0, 0.5)'
+    imageMode('blue')
+}
+
+function show() {
+    var as = document.forms[0].dropdown.value;
+    var color = dropDown.options[dropDown.selectedIndex].value;
+    console.log(as, color);
+    if (color === 'yellow') {
+        yellowMode()
+    } else if (color === 'pink') {
+        pinkMode()
+    }else if (color === 'green') {
+        greenMode()
+    }else if (color === 'blue') {
+        blueMode()
+    }
+}
+
+dropDown.onchange = show;
+
+show();
 
 function switchTheme(event) {
     if (event.target.checked) {
