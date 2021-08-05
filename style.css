@@ -12,10 +12,10 @@
 }
 
 [data-theme="dark"] {
-  --primary-color: rgb(150, 65, 255);
-  --primary-variant: #6c63ff;
-  --secondary-color: #4a43c9;
-  --on-primary: #fff;
+  --primary-color: #7b74ff;
+  --primary-variant: #6C63FF;
+  --secondary-color: #5851e0;
+  --on-primary: #000;
   --on-background: rgba(255, 255, 255, 0.9);
   --on-background-alt: rgba(255, 255, 255, 0.7);
   --background: #121212;
@@ -107,7 +107,7 @@ nav {
   letter-spacing: 3px;
   padding: 25px;
   width: 100vw;
-  background: rgb(255 255 255 / 50%);
+  background: rgba(255, 255, 255, 0.7);
 }
 
 a {
@@ -220,7 +220,7 @@ button:hover:not(.outline) {
   min-width: 50%;
   max-width: 60%;
   text-align: justify;
-  background: rgb(0 0 0 / 50%);
+  background: rgba(255, 255, 255, 0.7);
   color: var(--on-primary);
   border-radius: 10px;
   padding: 30px;
