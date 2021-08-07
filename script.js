@@ -31,11 +31,18 @@ function darkMode() {
     imageMode('dark_purple')
 }
 
+// function lightMode() {
+//     nav.style.backgroundColor = 'rgba(0, 0, 0, 0.1)'
+//     textBox.style.backgroundColor = 'rgb(0, 0, 0, 0.5)'
+//     toggleIcon.children[0].textContent = 'Light Mode'
+//     toggleIcon.children[1].classList.replace('fa-moon', 'fa-sun')
+//     imageMode('light_blue')
+// }
+
 function lightMode() {
+    document.documentElement.setAttribute('data-theme', 'light')
     nav.style.backgroundColor = 'rgba(0, 0, 0, 0.1)'
-    textBox.style.backgroundColor = 'rgb(0, 0, 0, 0.5)'
-    toggleIcon.children[0].textContent = 'Light Mode'
-    toggleIcon.children[1].classList.replace('fa-moon', 'fa-sun')
+    textBox.style.backgroundColor = 'rgba(255, 255, 255, 0.5)'
     imageMode('light_blue')
 }
 
@@ -71,9 +78,11 @@ function show() {
     var as = document.forms[0].dropdown.value;
     var color = dropDown.options[dropDown.selectedIndex].value;
     console.log(as, color);
-    if (color === 'yellow') {
+    if (color === 'light') {
+        lightMode()
+    } else if (color === 'yellow') {
         yellowMode()
-    } else if (color === 'pink') {
+    }else if (color === 'pink') {
         pinkMode()
     }else if (color === 'green') {
         greenMode()
